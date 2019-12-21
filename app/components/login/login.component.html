@@ -1,0 +1,50 @@
+<div id="wrap" ui-view="" autoscroll="false" class="ng-scope" style=""><div class="login ng-scope" ng-controller="loginController">
+    <!-- Application Content -->
+    <div class="container">
+        <div class="mid-container">
+            <div class="row">
+                <div class="col-sm-offset-3 col-sm-6">
+                    <div class="row login-window mt-12">
+                        <div class="col-md-offset-1 col-md-10">
+                            <section class="tile" style="box-shadow: 0 0 20px 0 rgba(0,0,0,.2), 0 5px 5px 0 rgba(0,0,0,.24);">
+                                <!-- tile body -->
+                                <div class="tile-body" style="padding: 50px;">
+                                    <div class="col-sm-12 text-center f-18 c-blue-brand">
+                                        <img src="assets/images/logo.png" style="width: 140px; margin-bottom: 20px;">
+                                    </div>
+                                    <form name="loginForm" class="ng-pristine ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" novalidate="" autocomplete="off">
+                                        <!-- Email -->
+                                        <div class="form-group mt-50">
+                                            <input type="email" class="form-control v-form-control ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" ng-model="login.email" name="email" ng-pattern="/^[a-zA-Z0-9._\u4e00-\u9eff]+[a-zA-Z0-9._\u4e00-\u9eff]+@[a-z-A-Z\u4e00-\u9eff.]{2,50}$/" placeholder="Your Email ID" required="" autocomplete="off">
+                                            <span ng-messages="(loginForm.email.$touched &amp;&amp; loginForm.email.$error)" role="alert" class="ng-inactive">
+                                                <!-- ngMessage: required -->
+                                                <!-- ngMessage: pattern -->
+                                            </span>
+                                        </div>
+                                        <!-- Password -->
+                                        <div class="form-group">
+                                            <input type="password" placeholder="Password" class="form-control v-form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" autocomplete="off" name="password" ng-model="login.password" required="">
+                                            <span ng-messages="(loginForm.password.$touched &amp;&amp; loginForm.password.$error)" role="alert" class="ng-inactive">
+                                                <!-- ngMessage: required -->
+                                            </span>
+                                        </div>
+                                     
+                                        <div class="text-center">
+                                            <button title="Login" ng-click="userLogin(loginForm)" ng-disabled="loginForm.$invalid" class="btn btn-bluebrand gaAnalytics" event="click" category="login-signup" label="login" disabled="disabled">Submit
+                                            </button>
+                                        </div>
+                                        
+                                        <!-- Forgot Password -->
+                                        <div class="pt-15 text-center">
+                                            <a ng-click="redirect()" class="cursor-pointer forgot-password-link">Forgot Password ?</a>
+                                        </div>
+                                    </form>
+                                </div>                        
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    </div>
+</div>

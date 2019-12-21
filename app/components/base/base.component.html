@@ -1,0 +1,86 @@
+<app-header></app-header>
+<main>
+<div class="col-md-12">
+  <div class="carousel-indicators1">
+        <div>
+          <div class="col-md-6">
+            <div class="col-md-6">
+              Select Date to view Data
+                <div class="form-group ">
+                  <div class="docs-datepicker">
+                     <div class="input-group" style="width: 100%;">
+                      <input type="text" class=" docs-date" name="date" placeholder="Start date">
+                       <i class="fa fa-calendar" aria-hidden="true" style="top: 12px; right: 20px; position: absolute"></i> 
+                     </div>
+                    <div class="docs-datepicker-container"></div>
+                  </div>
+                </div>
+                </div>
+            <div class="col-md-6">
+              &nbsp;
+                <div class="form-group ">
+                  <div class="docs-datepicker">
+                     <div class="input-group" style="width: 100%;">
+                      <input type="text" class=" docs-date" name="date" placeholder="Start date">
+                       <i class="fa fa-calendar" aria-hidden="true" style="top: 12px; right: 20px; position: absolute"></i> 
+                     </div>
+                    <div class="docs-datepicker-container"></div>
+                  </div>
+                </div>
+            </div>
+      
+      </div>
+      <div class="col-md-4 pull-right">
+        <div class="col-md-12">&nbsp;</div>
+          <div class="input-group">
+            <input type="text" class="form-control new-form-ctrl" placeholder="Search by Application Referance Number">
+             <i class="fa fa-search" aria-hidden="true" style="top: 12px; right: 20px; position: absolute; z-index: 99;"></i> 
+          </div>
+      </div>
+          <div class="clearfix"></div>
+          </div>
+        <div class="clearfix"></div>
+      </div>
+  <div class="col-md-12">
+      
+    <div class="superCard">
+      <div class=" main-content col-md-12 ">
+
+<h4>Order Details</h4>
+<table class="table">
+    <thead>
+       <tr>
+    <th>App.Ref.No</th>
+    <th>App date</th>
+    <th>Customer name</th>
+    <th>Service Details</th>
+    <th>Source</th>
+    <th>Order Status</th>
+    <th>Service Expert</th>
+    <th>Re-assign Service Expert</th>
+  </tr>
+    </thead>
+    <tbody class="flexcroll">
+        <tr *ngFor="let order of jsonData">
+            <td>{{order.applicationRefNumber}}</td>
+            <td>{{order.applicationDate}}</td>
+            <td>{{order.customerName}}</td>
+            <td>{{order.menuServiceName}}</td>
+            <td>{{order.source}}</td>
+            <td>{{order.orderStatus}}</td>
+            <td>{{order.serviceExpert}}</td>
+            <td>{{order.reassignServiceExpert}}</td>
+    </tr>
+  
+    </tbody>
+</table>
+<hr>
+
+          <div class="clearfix"></div>
+        </div>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+</div>
+</main>
+<app-footer></app-footer>
